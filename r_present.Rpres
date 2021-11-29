@@ -1,0 +1,46 @@
+R Presentation
+========================================================
+author: Wyatt McLeod
+date: November 29, 2021
+autosize: true
+
+Who Am I?
+========================================================
+Hello! My name is Wyatt McLeod. Here are some brief points about who I am:
+
+
+- I was born in Needles, CA on March 20th 1998.
+- I moved to Lincoln when I was 8 years old.
+- I went to Lincoln Northeast High School and just recently graduated from Augustana University in Sioux Falls, SD.
+- I am in the UNL Statistics PhD program.
+
+My Favorite Animal
+========================================================
+This is a picture of my favorite animal, the Shoebill Stork. This thing is just strange.
+<div align="center">
+<img src="shoebill-stork.jpg" width=300 height=400>
+</div>
+
+My Favorite Graph
+========================================================
+Here is my favorite graph from this class. I love it because it was a fun assignment and is super ugly.
+
+```{r, echo=FALSE}
+library(palmerpenguins)
+library(ggplot2)
+
+ggplot(data=penguins, aes(x = island, color = sex)) +
+  geom_bar(position='dodge2', fill='light pink') + labs(title='Sex Count by Island', x='Island', y='Sex Count') + theme(
+    panel.background = element_rect(fill='light pink'),
+    panel.grid.major = element_line(color='black'),
+    panel.grid.minor = element_line(color='light blue'),
+    plot.background = element_rect(fill = 'light blue'),
+    legend.position= 'bottom',
+  ) + scale_color_manual(breaks=c('female', 'male', 'NA'), values=c('light blue', 'light grey', 'grey'))
+```
+
+My Resume
+========================================================
+Here is my resume:
+
+[Resume](Peppa_Pig_Resume.pdf)
